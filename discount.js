@@ -31,6 +31,38 @@ function ticket_price(ticketQty) {
     }
 }
 const pricetotal = ticket_price(201)
-console.log(pricetotal);
+console.log("Your Total Ticket Price", pricetotal, "Taka");
 
 
+
+// ============================ MY FIRST LOGIC/////////////////
+
+/* 
+buy two get one free 
+buy five get two free  
+*/
+const cart = [
+    { nameItem: "shirt", Price: 500, },
+    { nameItem: "T-shirt", Price: 400, },
+    { nameItem: "Pant", Price: 600, },
+    { nameItem: "Pant", Price: 600, },
+    { nameItem: "Pant", Price: 600, },
+];
+for (i = 1; i < cart.length; i++) {
+}
+let countItem = i;
+
+function product(qty) {
+    if (qty === 2) {
+        return qty, "You Bought 2 Dress, You Are getting One Free";
+    }
+
+    else if (qty === 3 || qty === 4) {
+        return qty, "Buy More, and Get Free Item"
+    }
+    else {
+        return qty, "Thank You For Buy. (If you buy 2 item or 5 item you will getting Offer)"
+    }
+}
+const priceDrees = product(countItem)
+console.log(priceDrees);
